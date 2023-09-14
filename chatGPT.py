@@ -37,3 +37,9 @@ def query_chat_gpt(chat_gpt_input: str) -> str:
     output = completion.choices[0].message.content
 
     return output
+
+if __name__ == "__main__":
+    import json
+    test = json.loads(query_chat_gpt("please respond only with the word 'true'"))
+    print(test)
+    assert test
